@@ -5,7 +5,6 @@ file desc: url API test cases, all test cases are dependent on some other servic
 '''
 
 import os
-import abc
 import re
 import unittest
 import random
@@ -50,7 +49,6 @@ from flask_testing import TestCase
 #     '''
 #     is_login = None
 #     cookie = None
-#     __metaclass__ = abc.ABCMeta
 
 #     def create_app(self):
 #         self.login_plugin = LoginPlugin(self)
@@ -67,7 +65,6 @@ class BaseTest(TestCase):
     '''
     class desc: Abstract TestCase include basic create_app
     '''
-    __metaclass__ = abc.ABCMeta
     cookie = None
     test_db = 'test_alert.db'
 
